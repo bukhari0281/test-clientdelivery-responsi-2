@@ -10,8 +10,12 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm  install sqlite sqlite3'
-                sh 'node index.js'
             }
         } 
+        stage('Build image') {
+            steps {
+                sh 'docker build -t chatresponsi2:1.0.1 .'
+            }
+        }
     }
 }
