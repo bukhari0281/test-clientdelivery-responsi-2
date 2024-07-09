@@ -8,12 +8,12 @@ pipeline {
         } 
         stage('Build image') {
             steps {
-                sh 'docker build -t chatresponsi2:1.0.1 .'
+                sh 'docker build -t bukhari0281/chatresponsi2:1.0.1 .'
             }
         }
         stage('Run Image') { 
             steps {
-                sh 'docker run -d -p 3002:3000 chatresponsi2:1.0.1'
+                sh 'docker run -d -p 3002:3000 bukhari0281/chatresponsi2:1.0.1'
             }
         }
         stage('Push Image') { 
