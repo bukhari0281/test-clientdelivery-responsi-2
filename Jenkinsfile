@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sudo apt install npm'
-                sh 'sudo install sqlite sqlite3'
+                sh 'npm install'
+                sh 'npm  install sqlite sqlite3'
                 sh 'node index.js'
             }
         } 
