@@ -11,9 +11,14 @@ pipeline {
                 sh 'docker build -t chatresponsi2:1.0.1 .'
             }
         }
-        stage('Run image') { 
+        stage('Run Image') { 
             steps {
                 sh 'docker run -d -p 3002:3000 chatresponsi2:1.0.1'
+            }
+        }
+        stage('Push Image') { 
+            steps {
+                sh 'docker push chatresponsi2:1.0.1'
             }
         }
     }
