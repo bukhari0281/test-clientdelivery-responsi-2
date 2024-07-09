@@ -5,7 +5,7 @@ ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Setting working directory. all the path be relative tp workdir
-WORKDIR /usr/src/r-chat-app2
+WORKDIR /var/www/test-clientdelivery-responsi
 
 # Installing project files
 COPY . .
