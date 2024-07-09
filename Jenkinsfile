@@ -5,12 +5,6 @@ pipeline {
             steps {
                 checkout scm
             }
-        }
-        stage('Build') {
-            steps {
-                sh 'npm install'
-                sh 'npm  install sqlite sqlite3'
-            }
         } 
         stage('Build image') {
             steps {
