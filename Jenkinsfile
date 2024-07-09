@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Push Image') { 
             steps {
-                sh 'docker push chatresponsi2:1.0.1'
+                sh 'docker push bukhari0281/chatresponsi2:1.0.1'
             }
         }
     }
